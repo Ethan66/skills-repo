@@ -1,0 +1,81 @@
+{
+  "skill_name": "lz-frontend-code-standards",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我需要新增一个 Vue 3 弹窗组件，里面有表单、两个下拉框和一个提交按钮。请直接开始写代码，并把 props、emits、状态、方法按合适顺序组织好。",
+      "expected_output": "应该触发该 skill。执行时应先识别当前是 Vue 3 实现任务，再按 Vue 与 JS/TS 规范组织新增代码，尤其是 script setup 顺序、on/handle 命名、options 收敛和 Ref 命名。",
+      "files": [],
+      "expectations": [
+        "任务属于明确的前端实现阶段，应触发该 skill",
+        "输出应包含固定触发标记 [已触发 lz-frontend-code-standards]",
+        "输出应体现对 Vue 3 或 script setup 上下文的识别",
+        "输出应遵循 props、emits、state、computed、watch、methods、lifecycle 的组织顺序",
+        "输出应使用符合规范的事件命名和 Ref 命名"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "帮我修改一个 TypeScript 页面文件，新增筛选条件、请求列表接口，并把接口响应数据存到响应式变量里，直接给我改代码方案。",
+      "expected_output": "应该触发该 skill。执行时应对新增和修改的 TypeScript 代码应用命名、早返回、res 与 Data 后缀等规则。",
+      "files": [],
+      "expectations": [
+        "任务属于明确的前端改代码阶段，应触发该 skill",
+        "输出应包含固定触发标记 [已触发 lz-frontend-code-standards]",
+        "输出应体现对 JS/TS 命名规范的约束",
+        "接口原始响应应命名为 res",
+        "存储接口数据的变量应带 Data 或 ResData 后缀"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "这个页面里的 hooks 太乱了。请把新增的表格选择逻辑抽到当前组件同级 hooks 目录里，但不要动其他旧逻辑，直接开始改。",
+      "expected_output": "应该触发该 skill。执行时应识别这是 composables/hooks 改动，并根据是否私有复用来决定拆分位置，同时保持只处理本次改动范围。",
+      "files": [],
+      "expectations": [
+        "任务涉及 hooks 改动，应触发该 skill",
+        "输出应包含固定触发标记 [已触发 lz-frontend-code-standards]",
+        "输出应强调不主动治理旧代码",
+        "仅当前组件使用的长逻辑应拆到同级私有 hooks，而不是全局 hooks",
+        "输出应体现 hook 的入参与返回值应明确"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "我要重构一个老的 Vue 页面，先别分析，直接开始改新增需求部分：补一个倒计时、两个 radio 组选项和一个确认弹窗。",
+      "expected_output": "应该触发该 skill。执行时应只对本次新增和修改代码收敛规范，同时关注定时器清理、options 结构和事件方法命名。",
+      "files": [],
+      "expectations": [
+        "任务属于前端重构中的实现阶段，应触发该 skill",
+        "输出应包含固定触发标记 [已触发 lz-frontend-code-standards]",
+        "输出应强调只收敛新增和修改代码，不大面积处理旧代码",
+        "多个 radio 或 select 配置应收敛到 options 对象中",
+        "涉及倒计时时应体现定时器清理规则"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "你先帮我分析一下这个 Vue 弹窗组件为什么难维护，不要写代码，只说问题和改进建议。",
+      "expected_output": "不应该触发该 skill，因为当前任务是纯分析，不是实现阶段。",
+      "files": [],
+      "expectations": [
+        "任务属于纯分析阶段，不应触发该 skill",
+        "输出不应包含固定触发标记 [已触发 lz-frontend-code-standards]",
+        "输出不应进入具体的代码规范执行流程",
+        "输出不应把任务当成已经开始写代码或改代码"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "我们讨论一下新的前端组件规范要不要统一成 Composition API，现在先不要落代码。",
+      "expected_output": "不应该触发该 skill，因为当前任务是纯讨论和方案阶段，不是实现阶段。",
+      "files": [],
+      "expectations": [
+        "任务属于纯讨论阶段，不应触发该 skill",
+        "输出不应包含固定触发标记 [已触发 lz-frontend-code-standards]",
+        "输出不应进入新增或修改代码的执行约束",
+        "输出可以讨论规范，但不应表现为已进入实现守卫模式"
+      ]
+    }
+  ]
+}
