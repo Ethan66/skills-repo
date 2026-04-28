@@ -1,0 +1,9 @@
+{
+  "name": "lz-git-commit",
+  "version": "0.1.0",
+  "description": "在用户明确要求提交时使用。用于生成 git commit message，让用户确认后执行提交；如果用户不接受建议 message，还要支持自定义 message、复用上一个 commit message，或在满足条件时直接合并到上一个 commit。",
+  "entry": "SKILL.md",
+  "platforms": ["codex", "claude-code", "generic"],
+  "tags": ["git", "commit", "workflow"],
+  "private": true
+}
