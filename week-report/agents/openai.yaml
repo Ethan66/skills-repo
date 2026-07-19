@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitLab 周报"
+  short_description: "基于个人 GitLab 提交与代码核查生成准确中文周报"
+  default_prompt: "Use $week-report to review my GitLab commits and draft this week's report."
