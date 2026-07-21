@@ -1,0 +1,4 @@
+interface:
+  display_name: "阅读目录助手"
+  short_description: "按章节生成可查询阅读目录并归档到本地 Wiki"
+  default_prompt: "使用 $read-help 生成 Hello-Agents 第一章的阅读目录。"

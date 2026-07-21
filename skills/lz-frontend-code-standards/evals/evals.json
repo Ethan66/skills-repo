@@ -76,6 +76,33 @@
         "输出不应进入新增或修改代码的执行约束",
         "输出可以讨论规范，但不应表现为已进入实现守卫模式"
       ]
+    },
+    {
+      "id": 7,
+      "prompt": "接口已确认 orgProtocols 中只有 protocolName、protocolUrl，强制阅读标记只来自产品级 protocolSignMethod。请把它转换成 button-wrap 需要的协议列表并直接改代码。",
+      "expected_output": "应该触发该 skill。实现必须严格使用已确认字段，不得自行增加 name/protocolName、url/protocolUrl、协议级/产品级等猜测性兜底。",
+      "files": [],
+      "expectations": [
+        "任务属于明确的前端改代码阶段，应触发该 skill",
+        "输出应包含固定触发标记 [已触发 lz-frontend-code-standards]",
+        "名称应直接读取 protocol.protocolName",
+        "地址应直接读取 protocol.protocolUrl",
+        "强制阅读标记应直接根据产品级 protocolSignMethod 计算",
+        "不得生成 protocol.name || protocol.protocolName、protocol.protocolUrl || protocol.url 或协议级签署方式兜底"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "需求文档明确要求同时兼容旧版字段 protocolName 和新版字段 name，旧版将在 2026-09-01 下线。请修改协议列表映射，并保留可删除条件说明。",
+      "expected_output": "应该触发该 skill。由于兼容要求、字段差异和移除条件均已明确，可以实现受约束的兼容分支，并在代码旁标注适用范围和删除时间。",
+      "files": [],
+      "expectations": [
+        "任务属于明确的前端改代码阶段，应触发该 skill",
+        "兼容逻辑必须能追溯到需求文档明确要求",
+        "代码注释应说明旧版与新版字段差异",
+        "代码注释应说明 2026-09-01 后可移除旧版分支",
+        "不得顺带为其他未声明字段增加默认值或兼容逻辑"
+      ]
     }
   ]
 }

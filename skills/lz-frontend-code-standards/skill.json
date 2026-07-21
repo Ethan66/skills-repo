@@ -1,6 +1,6 @@
 {
   "name": "lz-frontend-code-standards",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "在前端实现阶段使用。只要任务开始写或改 Vue、JavaScript、TypeScript 代码，或涉及组件开发、页面开发、前端重构、交互逻辑、hooks/composables 改动，就使用这个 skill 统一约束新增和修改代码的规范。",
   "entry": "SKILL.md",
   "platforms": ["codex", "claude-code", "generic"],
